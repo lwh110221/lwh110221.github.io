@@ -16,12 +16,11 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: '目录',
+					label: '开始',
 					items: [
 						{ label: '示范', slug: 'guides/example' },
 					],
 				},
-
 			],
 		}),
 	],
