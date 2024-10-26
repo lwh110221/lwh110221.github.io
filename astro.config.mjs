@@ -18,7 +18,19 @@ export default defineConfig({
 				{
 					label: '开始',
 					items: [
-						{ label: '示范', slug: 'guides/example' },
+						{ label: 'Tips', slug: 'guides/example' },
+					],
+				},
+				{
+					label: '实验笔记',
+					items: [
+						{ label: 'Docker🐳容器入门', slug: 'notes/docker' },
+					],
+				},
+				{
+					label: '杂项',
+					items: [
+						{ label: 'Mac快捷键', slug: 'zaxiang/mactip' },
 					],
 				},
 			],
