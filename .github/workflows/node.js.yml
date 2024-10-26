@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # 使用最新版本
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # 选择一个较新的 Node.js 版本
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
@@ -24,8 +24,14 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          publish_branch: gh-pages
