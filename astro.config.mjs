@@ -3,7 +3,6 @@ import starlight from '@astrojs/starlight';
 
 export default defineConfig({
 	site: 'https://lwh110221.github.io', 
-  	integrations: [starlight()],
 	integrations: [
 		starlight({
 			title: 'Ahao的知识库',
