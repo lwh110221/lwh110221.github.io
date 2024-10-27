@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="zh-CN" dir="ltr" data-has-toc data-has-sidebar data-theme="dark" class="astro-bguv2lll"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>计算机组成原理 | Ahao的知识库</title><link rel="canonical" href="https://lwh110221.github.io/jizu/kaodian/"/><link rel="sitemap" href="/sitemap-index.xml"/><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v4.16.7"/><meta name="generator" content="Starlight v0.28.3"/><meta property="og:title" content="计算机组成原理"/><meta property="og:type" content="article"/><meta property="og:url" content="https://lwh110221.github.io/jizu/kaodian/"/><meta property="og:locale" content="zh-CN"/><meta property="og:description" content="计算机组成原理考点"/><meta property="og:site_name" content="Ahao的知识库"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="计算机组成原理考点"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg> <svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg> <svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> </template><link rel="stylesheet" href="/_astro/index.BvxI9DHn.css">
+<style>:root{--sl-badge-default-border: var(--sl-color-accent);--sl-badge-default-bg: var(--sl-color-accent-low);--sl-badge-default-text: #fff;--sl-badge-note-border: var(--sl-color-blue);--sl-badge-note-bg: var(--sl-color-blue-low);--sl-badge-note-text: #fff;--sl-badge-danger-border: var(--sl-color-red);--sl-badge-danger-bg: var(--sl-color-red-low);--sl-badge-danger-text: #fff;--sl-badge-success-border: var(--sl-color-green);--sl-badge-success-bg: var(--sl-color-green-low);--sl-badge-success-text: #fff;--sl-badge-caution-border: var(--sl-color-orange);--sl-badge-caution-bg: var(--sl-color-orange-low);--sl-badge-caution-text: #fff;--sl-badge-tip-border: var(--sl-color-purple);--sl-badge-tip-bg: var(--sl-color-purple-low);--sl-badge-tip-text: #fff}[data-theme=light]:root{--sl-badge-default-bg: var(--sl-color-accent-high);--sl-badge-note-bg: var(--sl-color-blue-high);--sl-badge-danger-bg: var(--sl-color-red-high);--sl-badge-success-bg: var(--sl-color-green-high);--sl-badge-caution-bg: var(--sl-color-orange-high);--sl-badge-tip-bg: var(--sl-color-purple-high)}.sl-badge:where(.astro-avdet4wd){display:inline-block;border:1px solid var(--sl-color-border-badge);border-radius:.25rem;font-family:var(--sl-font-system-mono);line-height:normal;color:var(--sl-color-text-badge);background-color:var(--sl-color-bg-badge);overflow-wrap:anywhere}.sidebar-content .sl-badge:where(.astro-avdet4wd){line-height:1;font-size:var(--sl-text-xs);padding:.125rem .375rem}.sidebar-content a[aria-current=page]>.sl-badge:where(.astro-avdet4wd){--sl-color-bg-badge: transparent;--sl-color-border-badge: currentColor;color:inherit}.default:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-default-bg);--sl-color-border-badge: var(--sl-badge-default-border);--sl-color-text-badge: var(--sl-badge-default-text)}.note:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-note-bg);--sl-color-border-badge: var(--sl-badge-note-border);--sl-color-text-badge: var(--sl-badge-note-text)}.danger:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-danger-bg);--sl-color-border-badge: var(--sl-badge-danger-border);--sl-color-text-badge: var(--sl-badge-danger-text)}.success:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-success-bg);--sl-color-border-badge: var(--sl-badge-success-border);--sl-color-text-badge: var(--sl-badge-success-text)}.tip:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-tip-bg);--sl-color-border-badge: var(--sl-badge-tip-border);--sl-color-text-badge: var(--sl-badge-tip-text)}.caution:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-caution-bg);--sl-color-border-badge: var(--sl-badge-caution-border);--sl-color-text-badge: var(--sl-badge-caution-text)}.small:where(.astro-avdet4wd){font-size:var(--sl-text-xs);padding:.125rem .25rem}.medium:where(.astro-avdet4wd){font-size:var(--sl-text-sm);padding:.175rem .35rem}.large:where(.astro-avdet4wd){font-size:var(--sl-text-base);padding:.225rem .45rem}.sl-markdown-content :is(h1,h2,h3,h4,h5,h6) .sl-badge:where(.astro-avdet4wd){vertical-align:middle}
+svg:where(.astro-c6vsoqas){color:var(--sl-icon-color);font-size:var(--sl-icon-size, 1em);width:1em;height:1em}
+.sl-steps{--bullet-size: calc(var(--sl-line-height) * 1rem);--bullet-margin: .375rem;list-style:none;counter-reset:steps-counter var(--sl-steps-start, 0);padding-inline-start:0}.sl-steps>li{counter-increment:steps-counter;position:relative;padding-inline-start:calc(var(--bullet-size) + 1rem);padding-bottom:1px;min-height:calc(var(--bullet-size) + var(--bullet-margin))}.sl-steps>li+li{margin-top:0}.sl-steps>li:before{content:counter(steps-counter);position:absolute;top:0;inset-inline-start:0;width:var(--bullet-size);height:var(--bullet-size);line-height:var(--bullet-size);font-size:var(--sl-text-xs);font-weight:600;text-align:center;color:var(--sl-color-white);background-color:var(--sl-color-gray-6);border-radius:99rem;box-shadow:inset 0 0 0 1px var(--sl-color-gray-5)}.sl-steps>li:after{--guide-width: 1px;content:"";position:absolute;top:calc(var(--bullet-size) + var(--bullet-margin));bottom:var(--bullet-margin);inset-inline-start:calc((var(--bullet-size) - var(--guide-width)) / 2);width:var(--guide-width);background-color:var(--sl-color-hairline-light)}.sl-steps>li>:first-child{--lh: calc(1em * var(--sl-line-height));--shift-y: calc(.5 * (var(--bullet-size) - var(--lh)));transform:translateY(var(--shift-y));margin-bottom:var(--shift-y)}.sl-steps>li>:first-child:where(h1,h2,h3,h4,h5,h6){--lh: calc(1em * var(--sl-line-height-headings))}@supports (--prop: 1lh){.sl-steps>li>:first-child{--lh: 1lh}}
+.sl-link-button:where(.astro-xwgiixxa){align-items:center;border:1px solid transparent;border-radius:999rem;display:inline-flex;font-size:var(--sl-text-sm);gap:.5em;line-height:1.1875;outline-offset:.25rem;padding:.4375rem 1.125rem;text-decoration:none}.sl-link-button:where(.astro-xwgiixxa).primary{background:var(--sl-color-text-accent);border-color:var(--sl-color-text-accent);color:var(--sl-color-black)}.sl-link-button:where(.astro-xwgiixxa).primary:hover{color:var(--sl-color-black)}.sl-link-button:where(.astro-xwgiixxa).secondary{border-color:inherit;color:var(--sl-color-white)}.sl-link-button:where(.astro-xwgiixxa).minimal{color:var(--sl-color-white);padding-inline:0}.sl-link-button:where(.astro-xwgiixxa) svg{flex-shrink:0}@media (min-width: 50rem){.sl-link-button:where(.astro-xwgiixxa){font-size:var(--sl-text-base);padding:.9375rem 1.25rem}}.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa){margin-inline-end:1rem}.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa):not(:where(p *)){margin-block:1rem}
+</style><script type="module" src="/_astro/hoisted.B08468CZ.js"></script>
+<script type="module" src="/_astro/page.7qqag-5g.js"></script></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">跳转到内容</a>  <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header sl-flex astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/" class="site-title sl-flex astro-m46x6ez3">  <span class="astro-m46x6ez3"> Ahao的知识库 </span> </a>  </div> <div class="sl-flex astro-kmkmnagf"> <site-search data-translations="{&#34;placeholder&#34;:&#34;搜索&#34;}" class="astro-v37mnknz"> <button data-open-modal disabled aria-label="搜索" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>  <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">搜索</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="搜索" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> 取消 </button> <div class="search-container astro-v37mnknz"> <div id="starlight__search" class="astro-v37mnknz"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script>    </div> <div class="sl-hidden md:sl-flex right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">选择主题</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">深色</option><option value="light" class="astro-4yphtoen">浅色</option><option value="auto" selected class="astro-4yphtoen">自动</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div> </div> </header> <nav class="sidebar astro-vrdttmbt" aria-label="主要"> <starlight-menu-button class="astro-jif73yzw"> <button aria-expanded="false" aria-label="菜单" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true" class="astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>  </button> </starlight-menu-button>    <div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt"> <div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="0f7p5cl" class="astro-kku4brbg"> <script>
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-3ii7xxms"> <li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="0"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">开始</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/guides/example" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Tips</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="1"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">计算机组成原理</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/jizu/kaodian" aria-current="page" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">考点汇总</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="2"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">实验笔记</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/notes/docker" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Docker🐳容器入门</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="3"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">杂项</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/zaxiang/mactip" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Mac快捷键</span>  </a> </li> </ul>  </details> </li> </ul>   <script>
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist>  <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-wu23bvmt"> <div class="sl-flex social-icons astro-wu23bvmt"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">选择主题</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">深色</option><option value="light" class="astro-4yphtoen">浅色</option><option value="auto" selected class="astro-4yphtoen">自动</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div>  </div> </div> </div> </nav> <div class="main-frame astro-vrdttmbt">   <div class="lg:sl-flex astro-67yu43on"> <aside class="right-sidebar-container astro-67yu43on"> <div class="right-sidebar astro-67yu43on"> <div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-doynk5tl"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl"><details id="starlight__mobile-toc" class="astro-doynk5tl"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl"><div class="toggle sl-flex astro-doynk5tl">本页内容<svg aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </div><span class="display-current astro-doynk5tl"></span></summary><div class="dropdown astro-doynk5tl"><ul class="isMobile astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">概述</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#一计算机系统概述" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">一、计算机系统概述</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一计算机发展历程" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）计算机发展历程</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二计算机系统层次结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）计算机系统层次结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三计算机性能指标" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）计算机性能指标</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#二数据的表示和运算" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">二、数据的表示和运算</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一数制与编码" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）数制与编码</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二定点数的表示和运算" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）定点数的表示和运算</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三浮点数的表示和运算" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）浮点数的表示和运算</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四算术逻辑单元-alu" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）算术逻辑单元 ALU</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#三存储器层次机构" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">三、存储器层次机构</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一存储器分类" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）存储器分类</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二存储器层次化结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）存储器层次化结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三半导体随机存取存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）半导体随机存取存储器</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四只读存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）只读存储器</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#五主存储器与-cpu-的连接" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（五）主存储器与 CPU 的连接</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#六双口-ram-和多模块存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（六）双口 RAM 和多模块存储器</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#七高速缓冲存储器cache" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（七）高速缓冲存储器（Cache）</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#八虚拟存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（八）虚拟存储器</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#四指令系统" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">四、指令系统</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一指令格式" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）指令格式</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二指令的寻址方式" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）指令的寻址方式</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三cisc-和-risc-的基本概念" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）CISC 和 RISC 的基本概念</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#五中央处理器cpu" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">五、中央处理器（CPU）</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一cpu-的功能和基本结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）CPU 的功能和基本结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二指令执行过程" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）指令执行过程</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三数据通路的功能和基本结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）数据通路的功能和基本结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四控制器的功能和工作原理" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）控制器的功能和工作原理</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#五指令流水线" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（五）指令流水线</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#六总线" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">六、总线</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一总线概述" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）总线概述</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二总线仲裁" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）总线仲裁</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三总线操作和定时" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）总线操作和定时</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四总线标准" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）总线标准</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#七输入输出io系统" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">七、输入输出（I/O）系统</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一io-系统基本概念" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）I/O 系统基本概念</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二外部设备" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）外部设备</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三io-接口io-控制器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）I/O 接口（I/O 控制器）</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四io-方式" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）I/O 方式</span> </a>  </li> </ul>  </li> </ul> </div></details></nav></mobile-starlight-toc></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn"><div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">本页内容</h2><ul class="astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">概述</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#一计算机系统概述" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">一、计算机系统概述</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一计算机发展历程" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）计算机发展历程</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二计算机系统层次结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）计算机系统层次结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三计算机性能指标" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）计算机性能指标</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#二数据的表示和运算" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">二、数据的表示和运算</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一数制与编码" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）数制与编码</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二定点数的表示和运算" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）定点数的表示和运算</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三浮点数的表示和运算" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）浮点数的表示和运算</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四算术逻辑单元-alu" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）算术逻辑单元 ALU</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#三存储器层次机构" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">三、存储器层次机构</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一存储器分类" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）存储器分类</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二存储器层次化结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）存储器层次化结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三半导体随机存取存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）半导体随机存取存储器</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四只读存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）只读存储器</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#五主存储器与-cpu-的连接" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（五）主存储器与 CPU 的连接</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#六双口-ram-和多模块存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（六）双口 RAM 和多模块存储器</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#七高速缓冲存储器cache" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（七）高速缓冲存储器（Cache）</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#八虚拟存储器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（八）虚拟存储器</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#四指令系统" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">四、指令系统</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一指令格式" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）指令格式</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二指令的寻址方式" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）指令的寻址方式</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三cisc-和-risc-的基本概念" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）CISC 和 RISC 的基本概念</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#五中央处理器cpu" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">五、中央处理器（CPU）</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一cpu-的功能和基本结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）CPU 的功能和基本结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二指令执行过程" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）指令执行过程</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三数据通路的功能和基本结构" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）数据通路的功能和基本结构</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四控制器的功能和工作原理" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）控制器的功能和工作原理</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#五指令流水线" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（五）指令流水线</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#六总线" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">六、总线</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一总线概述" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）总线概述</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二总线仲裁" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）总线仲裁</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三总线操作和定时" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）总线操作和定时</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四总线标准" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）总线标准</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#七输入输出io系统" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">七、输入输出（I/O）系统</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#一io-系统基本概念" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（一）I/O 系统基本概念</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#二外部设备" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（二）外部设备</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#三io-接口io-控制器" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（三）I/O 接口（I/O 控制器）</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#四io-方式" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">（四）I/O 方式</span> </a>  </li> </ul>  </li> </ul> </nav></starlight-toc></div></div> </div> </aside> <div class="main-pane astro-67yu43on">  <main data-pagefind-body lang="zh-CN" dir="ltr" class="astro-bguv2lll">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-j6tvhyss">计算机组成原理</h1>  </div> </div>  <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <h1 id="计算机组成原理考点汇总">计算机组成原理考点汇总</h1>
+<h2 id="一计算机系统概述">一、计算机系统概述</h2>
+<h3 id="一计算机发展历程">（一）计算机发展历程</h3>
+<ol>
+<li><strong>存储程序概念</strong>：首次提出将数据和程序一起放在存储器中，使编程更方便，冯・诺依曼机结构至今仍被广泛应用，虽有改革但变化不大。</li>
+<li><strong>ENIAC</strong>：1946 年诞生于美国宾夕法尼亚大学，用大量电子管、继电器，占地大、耗电高，每秒计算 5000 次加法。</li>
+<li>发展阶段
+<ul>
+<li>第一代（1946 - 50‘s 后期）：电子管计算机时代。</li>
+<li>第二代（50‘s 中期 - 60’s 后期）：晶体管计算机时代。</li>
+<li>第三代（60‘s 中期 - 70’s 前期）：集成电路计算机时代。</li>
+<li>第四代（70‘s 初 - ）：大规模集成电路计算机时代。</li>
+</ul>
+</li>
+</ol>
+<h3 id="二计算机系统层次结构">（二）计算机系统层次结构</h3>
+<ol>
+<li><strong>硬件组成</strong>：主要包括运算器、控制器、存储器、输入和输出五部分，CPU 是运算器和控制器的集成芯片。</li>
+<li>软件分类
+<ul>
+<li>系统软件：管理计算机系统，分配资源，确保正常高效运行，面向系统。</li>
+<li>应用软件：根据用户特殊要求编制，实现用户某类要求，面向用户。</li>
+</ul>
+</li>
+<li>工作过程
+<ul>
+<li>执行指令过程：指令由操作码和操作数组成，按地址顺序存于存储器，通过程序计数器读取指令，经取指令、指令译码、指令执行阶段完成操作。</li>
+</ul>
+</li>
+</ol>
+<h3 id="三计算机性能指标">（三）计算机性能指标</h3>
+<ol>
+<li>吞吐量与响应时间
+<ul>
+<li>吞吐量：单位时间内的数据输出数量。</li>
+<li>响应时间：从事件开始到结束的时间，也称执行时间。</li>
+</ul>
+</li>
+<li>CPU 时钟周期、主频、CPI、CPU 执行时间
+<ul>
+<li>CPU 时钟周期：机器主频的倒数，。</li>
+<li>主频：CPU 工作主时钟频率，。</li>
+<li>CPI：执行一条指令所需平均时钟周期。</li>
+<li>CPU 执行时间：（为执行程序中指令总数）。</li>
+</ul>
+</li>
+<li>MIPS、MFLOPS
+<ul>
+<li>MIPS：，适合评价标量机。</li>
+<li>MFLOPS：（为程序中浮点数运算次数），适合衡量向量机性能。</li>
+</ul>
+</li>
+</ol>
+<h2 id="二数据的表示和运算">二、数据的表示和运算</h2>
+<h3 id="一数制与编码">（一）数制与编码</h3>
+<ol>
+<li>进位计数制及其转换
+<ul>
+<li>进位计数制：涉及基数和权，不同数制转换方法各异，如二进制、八进制、十六进制与十进制间的转换。</li>
+</ul>
+</li>
+<li><strong>真值和机器数</strong>：真值正负号后跟绝对值表示，机器数中正负号数字化，有原码、补码和反码等表示法。</li>
+<li><strong>BCD 码</strong>：用 4 位二进制码对十进制数位编码，运算结果需修正。</li>
+<li><strong>字符与字符串</strong>：字符通过编码识别处理，常见编码有 ASCII 码、EBCDIC 码等，字符串存储有向量存储法和串表存储法。</li>
+<li>校验码
+<ul>
+<li>奇偶校验码：增加校验位使码距为 2，有奇校验和偶校验。</li>
+<li>海明校验码：加入校验位，可指出错误位置，实现自动纠错。</li>
+<li>CRC 校验码：通过多项式运算得到校验码，可判断数据是否出错。</li>
+</ul>
+</li>
+</ol>
+<h3 id="二定点数的表示和运算">（二）定点数的表示和运算</h3>
+<ol>
+<li>定点数表示
+<ul>
+<li>无符号数：机器字长全用于表示数值大小。</li>
+<li>带符号数：最高位为符号位，有原码、补码和反码表示法。</li>
+</ul>
+</li>
+<li>定点数运算
+<ul>
+<li>位移运算：分算术移位和逻辑移位，算术移位带符号数移位，逻辑移位无符号数移位。</li>
+<li>原码定点数加 / 减运算：繁琐，需复杂硬件逻辑，实际少用。</li>
+<li>补码定点数加 / 减运算：无需符号判定，连同符号位一起运算。</li>
+<li>定点数乘 / 除运算：包括原码和补码的一位、两位乘法及除法运算，有多种算法。</li>
+<li>溢出概念与判别：运算结果超出表示范围为溢出，有多种判别方法。</li>
+</ul>
+</li>
+</ol>
+<h3 id="三浮点数的表示和运算">（三）浮点数的表示和运算</h3>
+<ol>
+<li><strong>浮点数表示</strong>：，机内表示含符号位、阶码和尾数，有 IEEE754 标准规定的单精度和双精度格式。</li>
+<li><strong>浮点数加 / 减运算</strong>：经对阶、尾数加减、规格化、舍入、检查阶码溢出等步骤完成运算。</li>
+</ol>
+<h3 id="四算术逻辑单元-alu">（四）算术逻辑单元 ALU</h3>
+<ol>
+<li>加法器
+<ul>
+<li>串行进位加法器：逻辑电路简单，但运算速度慢。</li>
+<li>并行进位加法器：速度快，以增加硬件逻辑为代价，有单级先行进位和多级先行进位结构。</li>
+</ul>
+</li>
+<li><strong>ALU 功能与结构</strong>：完成算术和逻辑运算，包含多种运算部件，通过指令要求执行操作，有通用寄存器组和重要状态寄存器。</li>
+</ol>
+<h2 id="三存储器层次机构">三、存储器层次机构</h2>
+<h3 id="一存储器分类">（一）存储器分类</h3>
+<ol>
+<li><strong>按存储介质分类</strong>：半导体、磁表面、磁芯、光盘存储器。</li>
+<li><strong>按存取方式分类</strong>：随机、只读、串行访问存储器。</li>
+<li><strong>按在计算机中的作用分类</strong>。</li>
+</ol>
+<h3 id="二存储器层次化结构">（二）存储器层次化结构</h3>
+<p>体现为缓存 - 主存 - 辅存存储层次，速度、容量和位价相互制约。</p>
+<h3 id="三半导体随机存取存储器">（三）半导体随机存取存储器</h3>
+<ol>
+<li><strong>SRAM</strong>：静态存储单元信息稳定，无需重写或刷新，但集成度低、功耗大。</li>
+<li><strong>DRAM</strong>：靠电容存储电荷，需定期刷新，集成度高、功耗低，广泛应用。</li>
+</ol>
+<h3 id="四只读存储器">（四）只读存储器</h3>
+<p>包括 ROM、PROM、EPROM、E2PROM 和 Flash Memory，掉电后内容不丢失，写入方式和特性各异。</p>
+<h3 id="五主存储器与-cpu-的连接">（五）主存储器与 CPU 的连接</h3>
+<p>需进行位扩展、字扩展或字位扩展，以满足存储容量需求。</p>
+<h3 id="六双口-ram-和多模块存储器">（六）双口 RAM 和多模块存储器</h3>
+<ol>
+<li><strong>双端口存储器</strong>：有两个读 / 写端口，扩展信息交换能力。</li>
+<li><strong>多模块存储器</strong>：采用并行主存系统解决速度匹配问题，有多种工作方式。</li>
+</ol>
+<h3 id="七高速缓冲存储器cache">（七）高速缓冲存储器（Cache）</h3>
+<ol>
+<li><strong>程序访问局部性</strong>：包括时间和空间局部性，是 Cache 工作原理的基础。</li>
+<li><strong>基本工作原理</strong>：由块表和快速存储器组成，处理机按地址访问，涉及定位和替换问题，对程序员透明。</li>
+<li><strong>映射方式</strong>：有直接映象、全相联映象和组相联映象，影响数据存储位置和替换策略。</li>
+<li><strong>替换算法</strong>：如随机算法、先进先出、近期最少使用法和优化替换算法，各有优缺点。</li>
+<li><strong>写策略</strong>：包括写回法和全写法，处理 Cache 与主存数据不一致问题，写不命中时有不同解决方法。</li>
+</ol>
+<h3 id="八虚拟存储器">（八）虚拟存储器</h3>
+<ol>
+<li><strong>基本概念</strong>：是主存扩展，空间大小取决于访存能力，使存储系统兼具大容量和高速度，有段式、页式和段页式管理方式。</li>
+<li><strong>页式虚拟存储器</strong>：虚拟和实际空间分页，通过页表实现地址映射，由操作系统管理。</li>
+<li><strong>段式虚拟存储器</strong>：按段分配主存，通过段表指明段位置，段长可变化。</li>
+<li><strong>段页式虚拟存储器</strong>：结合段式和页式，访存通过段表和页表进行。</li>
+<li><strong>TLB（快表）</strong>：提高页表访问速度，实现虚实地址快速变换，存在透明性。</li>
+</ol>
+<h2 id="四指令系统">四、指令系统</h2>
+<h3 id="一指令格式">（一）指令格式</h3>
+<ol>
+<li><strong>基本格式</strong>：包含操作码和地址码，操作码表示操作性质，地址码描述操作对象或地址。</li>
+<li>定长操作码指令格式
+<ul>
+<li>零地址指令：无操作数或操作数默认，如空操作、堆栈运算指令。</li>
+<li>一地址指令：操作数地址与结果存储地址相同，如单操作数指令。</li>
+<li>二地址指令：常见格式，两个源操作数地址，一个为结果目的地址。</li>
+<li>三地址指令：两个源操作数地址和一个结果存储地址。</li>
+<li>多地址指令：用于处理成批数据，需多个地址描述数据信息。</li>
+</ul>
+</li>
+<li><strong>扩展操作码指令格式</strong>：通过扩展操作码长度到地址码字段，实现更多指令安排。</li>
+</ol>
+<h3 id="二指令的寻址方式">（二）指令的寻址方式</h3>
+<ol>
+<li><strong>有效地址概念</strong>：操作数真实地址，由寻址方式和形式地址决定。</li>
+<li><strong>寻址分类</strong>：指令寻址（顺序和跳跃）和数据寻址，常见寻址方式有立即、直接、隐含、间接、寄存器、寄存器间接、基址、变址、相对、堆栈寻址等。</li>
+</ol>
+<h3 id="三cisc-和-risc-的基本概念">（三）CISC 和 RISC 的基本概念</h3>
+<ol>
+<li><strong>CISC（复杂指令集计算机）</strong>：指令系统复杂庞大，旨在提高操作系统效率、缩短与高级语言语义差别、实现程序兼容，但研制成本高、难实现流水线。</li>
+<li>RISC（简单指令集计算机）
+<ul>
+<li>产生：基于对 CISC 指令使用频率分析，提出简化指令集想法。</li>
+<li>特点：指令简单、长度固定，多数指令单周期完成，寄存器多，以硬布线控制逻辑为主，重视编译优化。</li>
+<li>发展：市场占有率不断提高，各大公司投入力量研发。</li>
+<li>特征对比：与 CISC 在指令系统、控制逻辑实现等多方面有明显差异。</li>
+</ul>
+</li>
+</ol>
+<h2 id="五中央处理器cpu">五、中央处理器（CPU）</h2>
+<h3 id="一cpu-的功能和基本结构">（一）CPU 的功能和基本结构</h3>
+<ol>
+<li>控制器功能
+<ul>
+<li>取指令、分析指令、执行指令，循环执行直至停机或干预。</li>
+<li>控制程序和数据输入输出，处理异常和请求。</li>
+</ul>
+</li>
+<li>控制器组成
+<ul>
+<li>程序计数器（PC）：形成指令地址，可顺序或通过转移指令改变。</li>
+<li>指令寄存器（IR）：存放当前执行指令。</li>
+<li>指令译码器：分析操作码，产生控制信号。</li>
+<li>脉冲源及启停线路：提供时钟脉冲，控制时序信号发生。</li>
+<li>时序控制信号形成部件：根据指令产生时序控制信号，处理异常情况。</li>
+</ul>
+</li>
+</ol>
+<h3 id="二指令执行过程">（二）指令执行过程</h3>
+<ol>
+<li><strong>指令执行时序</strong>：计算机工作时序按存储器工作周期划分，指令周期包含取指、分析、执行阶段，不同指令执行时间不同。</li>
+<li><strong>指令执行过程举例</strong>：以加法指令为例，说明取指、计算地址、取数、执行等周期的操作和控制信号。</li>
+</ol>
+<h3 id="三数据通路的功能和基本结构">（三）数据通路的功能和基本结构</h3>
+<p>连接 CPU 内部及外部部件，传输数据和控制信号。</p>
+<h3 id="四控制器的功能和工作原理">（四）控制器的功能和工作原理</h3>
+<ol>
+<li>硬布线控制器
+<ul>
+<li>采用逻辑电路产生控制信号，需确定指令周期和操作控制信号逻辑表达式。</li>
+<li>涉及时序与节拍、操作码译码器和操作控制信号产生等方面。</li>
+</ul>
+</li>
+<li>微程序控制器
+<ul>
+<li>微程序、微指令和微命令：指令功能通过微指令序列实现，微指令由微操作组成，微程序是微指令序列集合。</li>
+<li>微指令编码方式：直接控制法、字段直接编译法、字段间接编译法。</li>
+<li>微地址形成方式：包括微程序入口地址和后继地址形成，有多种方式实现。</li>
+</ul>
+</li>
+</ol>
+<h3 id="五指令流水线">（五）指令流水线</h3>
+<ol>
+<li>基本概念
+<ul>
+<li>原理：提高指令执行速度，指令重叠执行，细分解释过程，用多个子部件处理子过程。</li>
+<li>影响因素：结构、数据和控制相关影响流水线性能。</li>
+<li>性能指标：吞吐率、加速比和效率衡量流水线性能。</li>
+</ul>
+</li>
+<li>超标量和动态流水线
+<ul>
+<li>超标量：处理器可同时启动并独立执行多条普通操作指令，集成多条流水线结构。</li>
+<li>动态流水线：允许同一时间连接不同功能段子集完成不同运算，必为多功能流水线。</li>
+</ul>
+</li>
+</ol>
+<h2 id="六总线">六、总线</h2>
+<h3 id="一总线概述">（一）总线概述</h3>
+<ol>
+<li><strong>基本概念</strong>：连接部件的信息传输线，信息传输分串行和并行，有片内、系统和通信总线之分。</li>
+<li>总线分类
+<ul>
+<li>片内总线：芯片内部总线。</li>
+<li>系统总线：连接计算机部件，包括数据、地址、控制总线，有不同结构。</li>
+<li>通信总线：用于计算机系统间或与其他系统通信，有串行和并行之分。</li>
+</ul>
+</li>
+<li><strong>总线组成与性能指标</strong>：结构有单总线和多总线结构，性能指标包括宽度、带宽、同步方式、复用、信号线数、控制方式等。</li>
+</ol>
+<h3 id="二总线仲裁">（二）总线仲裁</h3>
+<ol>
+<li>集中仲裁方式
+<ul>
+<li>链式查询：总线授权信号串行传递，优先响应离出发点最近的请求设备。</li>
+<li>计数器定时查询：通过计数确定响应设备，设备地址判别电路判断。</li>
+<li>独立请求方式：每个设备有独立请求和授权信号，由排队电路决定响应顺序。</li>
+</ul>
+</li>
+<li><strong>分布仲裁方式</strong>：各主设备有仲裁号和电路，通过对比仲裁号确定总线使用权。</li>
+</ol>
+<h3 id="三总线操作和定时">（三）总线操作和定时</h3>
+<ol>
+<li><strong>总线操作</strong>：包括读、写、块传送、写后读、读后写、广播和广集等操作。</li>
+<li>定时方式
+<ul>
+<li>同步定时：所有模块由统一时钟脉冲控制，动作在时钟周期开始，多在一个周期内完成。</li>
+<li>异步定时：应答式或互锁机制定时，操作由特定信号确定，双方提供联络信号。</li>
+</ul>
+</li>
+</ol>
+<h3 id="四总线标准">（四）总线标准</h3>
+<ol>
+<li><strong>系统总线</strong>：如 ISA、EISA、VESA、PCI、AGP 等标准，各有特点和应用范围。</li>
+<li><strong>设备总线</strong>：如 IDE、SCSI、RS - 232、USB 等标准，用于不同设备连接。</li>
+</ol>
+<h2 id="七输入输出io系统">七、输入输出（I/O）系统</h2>
+<h3 id="一io-系统基本概念">（一）I/O 系统基本概念</h3>
+<p>发展经历多个阶段，从早期分散连接到具有通道结构和 I/O 处理机阶段。</p>
+<h3 id="二外部设备">（二）外部设备</h3>
+<ol>
+<li><strong>输入设备</strong>：键盘（按键开关组成，产生字符代码转换后送主机，有多种键型）和鼠标（机械式、光电式）。</li>
+<li>输出设备
+<ul>
+<li>显示器：分类多样，包括按器件、显示内容和设备功能分类，有字符、图形、图像显示方式，工作原理各异。</li>
+<li>打印机：按印字原理和工作方式分类，有点阵式、激光、喷墨打印机等，各有特点。</li>
+</ul>
+</li>
+<li>外存储器
+<ul>
+<li>硬盘存储器：性能指标包括存储密度、容量、寻址时间、数据传输率、误码率等，有不同类型和磁道记录格式。</li>
+<li>磁盘阵列（RAID）：利用并行处理原理，有多种级别，提高数据传输带宽和可靠性。</li>
+<li>光盘存储器：利用激光束存储信息，有只读、写一次 / 多次读和可重写光盘，CD - ROM 光盘信息记录和扇区结构有特定方式。</li>
+</ul>
+</li>
+</ol>
+<h3 id="三io-接口io-控制器">（三）I/O 接口（I/O 控制器）</h3>
+<ol>
+<li>功能与结构
+<ul>
+<li>功能：实现设备选择、数据缓冲、串并格式转换、电平转换、控制命令传送和设备状态反映。</li>
+<li>基本组成：包括相关寄存器和控制逻辑等。</li>
+</ul>
+</li>
+<li><strong>I/O 端口编址</strong>：有专门 I/O 指令和利用访问存储器指令完成 I/O 功能两种编址方法。</li>
+</ol>
+<h3 id="四io-方式">（四）I/O 方式</h3>
+<ol>
+<li><strong>程序查询方式</strong>：CPU 不断查询 I/O 设备状态，效率低，设备准备好才执行 I/O 操作。</li>
+<li>程序中断方式
+<ul>
+<li>基本概念：程序执行中遇异常或特殊情况，CPU 暂停当前程序转向处理，处理后返回断点继续执行。</li>
+<li>响应过程：中断源请求经排队后，CPU 接受最高级别请求，通过查询法或串行排队链法确定中断源，再转向中断服务程序入口。</li>
+<li>处理过程：包括关中断、保存断点和现场、判别中断源、开中断、执行服务程序、退出中断等步骤，可实现多重中断和中断屏蔽。</li>
+</ul>
+</li>
+<li>DMA 方式
+<ul>
+<li>DMA 控制器组成：含主存地址、外围设备地址、字数计数器、控制与状态、数据缓冲寄存器和中断机构。</li>
+<li>传送过程：预处理、数据交换（输入时涉及读入、请求、送数据、更新地址和计数、判断结束等操作）、后处理。</li>
+<li>工作方式：有 CPU 暂停、周期窃取、CPU 和 DMA 交替工作方式。</li>
+</ul>
+</li>
+<li>通道方式
+<ul>
+<li>I/O 通道是独立部件，可执行通道命令，增强主机与外设并行能力，有字节多路、选择、数组多路通道三种类型，特点和适用设备不同</li>
+</ul>
+</li>
+</ol> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links astro-u2l5gyhi" dir="ltr"> <a href="/guides/example" rel="prev" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg>  <span class="astro-u2l5gyhi"> 上一页 <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Tips</span> </span> </a> <a href="/notes/docker" rel="next" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>  <span class="astro-u2l5gyhi"> 下一页 <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Docker🐳容器入门</span> </span> </a> </div>   </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>
