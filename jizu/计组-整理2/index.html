@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" dir="ltr" data-has-toc data-has-sidebar data-theme="dark" class="astro-bguv2lll"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>计算机组成原理-整理版2 | Ahao的知识库</title><link rel="canonical" href="https://lwh110221.github.io/jizu/%E8%AE%A1%E7%BB%84-%E6%95%B4%E7%90%862/"/><link rel="sitemap" href="/sitemap-index.xml"/><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v4.16.7"/><meta name="generator" content="Starlight v0.28.3"/><meta property="og:title" content="计算机组成原理-整理版2"/><meta property="og:type" content="article"/><meta property="og:url" content="https://lwh110221.github.io/jizu/%E8%AE%A1%E7%BB%84-%E6%95%B4%E7%90%862/"/><meta property="og:locale" content="zh-CN"/><meta property="og:description" content="计算机组成原理-整理版2"/><meta property="og:site_name" content="Ahao的知识库"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="计算机组成原理-整理版2"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg> <svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg> <svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> </template><link rel="stylesheet" href="/_astro/index.BvxI9DHn.css">
+<style>:root{--sl-badge-default-border: var(--sl-color-accent);--sl-badge-default-bg: var(--sl-color-accent-low);--sl-badge-default-text: #fff;--sl-badge-note-border: var(--sl-color-blue);--sl-badge-note-bg: var(--sl-color-blue-low);--sl-badge-note-text: #fff;--sl-badge-danger-border: var(--sl-color-red);--sl-badge-danger-bg: var(--sl-color-red-low);--sl-badge-danger-text: #fff;--sl-badge-success-border: var(--sl-color-green);--sl-badge-success-bg: var(--sl-color-green-low);--sl-badge-success-text: #fff;--sl-badge-caution-border: var(--sl-color-orange);--sl-badge-caution-bg: var(--sl-color-orange-low);--sl-badge-caution-text: #fff;--sl-badge-tip-border: var(--sl-color-purple);--sl-badge-tip-bg: var(--sl-color-purple-low);--sl-badge-tip-text: #fff}[data-theme=light]:root{--sl-badge-default-bg: var(--sl-color-accent-high);--sl-badge-note-bg: var(--sl-color-blue-high);--sl-badge-danger-bg: var(--sl-color-red-high);--sl-badge-success-bg: var(--sl-color-green-high);--sl-badge-caution-bg: var(--sl-color-orange-high);--sl-badge-tip-bg: var(--sl-color-purple-high)}.sl-badge:where(.astro-avdet4wd){display:inline-block;border:1px solid var(--sl-color-border-badge);border-radius:.25rem;font-family:var(--sl-font-system-mono);line-height:normal;color:var(--sl-color-text-badge);background-color:var(--sl-color-bg-badge);overflow-wrap:anywhere}.sidebar-content .sl-badge:where(.astro-avdet4wd){line-height:1;font-size:var(--sl-text-xs);padding:.125rem .375rem}.sidebar-content a[aria-current=page]>.sl-badge:where(.astro-avdet4wd){--sl-color-bg-badge: transparent;--sl-color-border-badge: currentColor;color:inherit}.default:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-default-bg);--sl-color-border-badge: var(--sl-badge-default-border);--sl-color-text-badge: var(--sl-badge-default-text)}.note:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-note-bg);--sl-color-border-badge: var(--sl-badge-note-border);--sl-color-text-badge: var(--sl-badge-note-text)}.danger:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-danger-bg);--sl-color-border-badge: var(--sl-badge-danger-border);--sl-color-text-badge: var(--sl-badge-danger-text)}.success:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-success-bg);--sl-color-border-badge: var(--sl-badge-success-border);--sl-color-text-badge: var(--sl-badge-success-text)}.tip:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-tip-bg);--sl-color-border-badge: var(--sl-badge-tip-border);--sl-color-text-badge: var(--sl-badge-tip-text)}.caution:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-caution-bg);--sl-color-border-badge: var(--sl-badge-caution-border);--sl-color-text-badge: var(--sl-badge-caution-text)}.small:where(.astro-avdet4wd){font-size:var(--sl-text-xs);padding:.125rem .25rem}.medium:where(.astro-avdet4wd){font-size:var(--sl-text-sm);padding:.175rem .35rem}.large:where(.astro-avdet4wd){font-size:var(--sl-text-base);padding:.225rem .45rem}.sl-markdown-content :is(h1,h2,h3,h4,h5,h6) .sl-badge:where(.astro-avdet4wd){vertical-align:middle}
+svg:where(.astro-c6vsoqas){color:var(--sl-icon-color);font-size:var(--sl-icon-size, 1em);width:1em;height:1em}
+.sl-steps{--bullet-size: calc(var(--sl-line-height) * 1rem);--bullet-margin: .375rem;list-style:none;counter-reset:steps-counter var(--sl-steps-start, 0);padding-inline-start:0}.sl-steps>li{counter-increment:steps-counter;position:relative;padding-inline-start:calc(var(--bullet-size) + 1rem);padding-bottom:1px;min-height:calc(var(--bullet-size) + var(--bullet-margin))}.sl-steps>li+li{margin-top:0}.sl-steps>li:before{content:counter(steps-counter);position:absolute;top:0;inset-inline-start:0;width:var(--bullet-size);height:var(--bullet-size);line-height:var(--bullet-size);font-size:var(--sl-text-xs);font-weight:600;text-align:center;color:var(--sl-color-white);background-color:var(--sl-color-gray-6);border-radius:99rem;box-shadow:inset 0 0 0 1px var(--sl-color-gray-5)}.sl-steps>li:after{--guide-width: 1px;content:"";position:absolute;top:calc(var(--bullet-size) + var(--bullet-margin));bottom:var(--bullet-margin);inset-inline-start:calc((var(--bullet-size) - var(--guide-width)) / 2);width:var(--guide-width);background-color:var(--sl-color-hairline-light)}.sl-steps>li>:first-child{--lh: calc(1em * var(--sl-line-height));--shift-y: calc(.5 * (var(--bullet-size) - var(--lh)));transform:translateY(var(--shift-y));margin-bottom:var(--shift-y)}.sl-steps>li>:first-child:where(h1,h2,h3,h4,h5,h6){--lh: calc(1em * var(--sl-line-height-headings))}@supports (--prop: 1lh){.sl-steps>li>:first-child{--lh: 1lh}}
+.sl-link-button:where(.astro-xwgiixxa){align-items:center;border:1px solid transparent;border-radius:999rem;display:inline-flex;font-size:var(--sl-text-sm);gap:.5em;line-height:1.1875;outline-offset:.25rem;padding:.4375rem 1.125rem;text-decoration:none}.sl-link-button:where(.astro-xwgiixxa).primary{background:var(--sl-color-text-accent);border-color:var(--sl-color-text-accent);color:var(--sl-color-black)}.sl-link-button:where(.astro-xwgiixxa).primary:hover{color:var(--sl-color-black)}.sl-link-button:where(.astro-xwgiixxa).secondary{border-color:inherit;color:var(--sl-color-white)}.sl-link-button:where(.astro-xwgiixxa).minimal{color:var(--sl-color-white);padding-inline:0}.sl-link-button:where(.astro-xwgiixxa) svg{flex-shrink:0}@media (min-width: 50rem){.sl-link-button:where(.astro-xwgiixxa){font-size:var(--sl-text-base);padding:.9375rem 1.25rem}}.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa){margin-inline-end:1rem}.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa):not(:where(p *)){margin-block:1rem}
+</style><script type="module" src="/_astro/hoisted.B08468CZ.js"></script>
+<script type="module" src="/_astro/page.7qqag-5g.js"></script></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">跳转到内容</a>  <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header sl-flex astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/" class="site-title sl-flex astro-m46x6ez3">  <span class="astro-m46x6ez3"> Ahao的知识库 </span> </a>  </div> <div class="sl-flex astro-kmkmnagf"> <site-search data-translations="{&#34;placeholder&#34;:&#34;搜索&#34;}" class="astro-v37mnknz"> <button data-open-modal disabled aria-label="搜索" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>  <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">搜索</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="搜索" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> 取消 </button> <div class="search-container astro-v37mnknz"> <div id="starlight__search" class="astro-v37mnknz"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script>    </div> <div class="sl-hidden md:sl-flex right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">选择主题</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">深色</option><option value="light" class="astro-4yphtoen">浅色</option><option value="auto" selected class="astro-4yphtoen">自动</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div> </div> </header> <nav class="sidebar astro-vrdttmbt" aria-label="主要"> <starlight-menu-button class="astro-jif73yzw"> <button aria-expanded="false" aria-label="菜单" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true" class="astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>  </button> </starlight-menu-button>    <div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt"> <div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="0pqwhet" class="astro-kku4brbg"> <script>
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-3ii7xxms"> <li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="0"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">开始</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/guides/example" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Tips</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="1"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">考点大纲</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-计算机组成原理" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">计算机组成原理</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-数据结构" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">数据结构</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-计算机网络" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">计算机网络</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-操作系统" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">操作系统</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-数据库系统" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">数据库系统</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-通信原理" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">通信原理（信号与系统）</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-通信网基础" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">通信网理论基础</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-光纤通信" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">光纤通信</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/25dagang/大纲提取-数字化新技术" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">数字化新技术理论</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="2"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">计算机组成原理</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/jizu/计组-整理" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">知识点-整理版</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/jizu/计组-整理2" aria-current="page" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">知识点-整理版2</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="3"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">实验笔记</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/notes/docker" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Docker🐳容器入门</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="4"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">杂项</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/zaxiang/mactip" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Mac快捷键</span>  </a> </li> </ul>  </details> </li> </ul>   <script>
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist>  <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-wu23bvmt"> <div class="sl-flex social-icons astro-wu23bvmt"> <a href="https://github.com/withastro/starlight" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">选择主题</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">深色</option><option value="light" class="astro-4yphtoen">浅色</option><option value="auto" selected class="astro-4yphtoen">自动</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div>  </div> </div> </div> </nav> <div class="main-frame astro-vrdttmbt">   <div class="lg:sl-flex astro-67yu43on"> <aside class="right-sidebar-container astro-67yu43on"> <div class="right-sidebar astro-67yu43on"> <div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-doynk5tl"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl"><details id="starlight__mobile-toc" class="astro-doynk5tl"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl"><div class="toggle sl-flex astro-doynk5tl">本页内容<svg aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </div><span class="display-current astro-doynk5tl"></span></summary><div class="dropdown astro-doynk5tl"><ul class="isMobile astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">概述</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#计算机组成原理-整理2" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">计算机组成原理-整理2</span> </a>  </li> </ul> </div></details></nav></mobile-starlight-toc></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn"><div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">本页内容</h2><ul class="astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">概述</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#计算机组成原理-整理2" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">计算机组成原理-整理2</span> </a>  </li> </ul> </nav></starlight-toc></div></div> </div> </aside> <div class="main-pane astro-67yu43on">  <main data-pagefind-body lang="zh-CN" dir="ltr" class="astro-bguv2lll">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-j6tvhyss">计算机组成原理-整理版2</h1>  </div> </div>  <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <h2 id="计算机组成原理-整理2">计算机组成原理-整理2</h2>
+<h4 id="1计算机系统概述层次结构性能指标">（1）计算机系统概述、层次结构、性能指标</h4>
+<ul>
+<li><strong>计算机系统概述</strong>：包括<u>硬件系统</u>和<u>软件系统</u>。硬件是计算机的物理实体，如<u>处理器、存储器、输入输出设备</u>等；软件则是为了运行、管理和维护计算机而编写的各种程序的总和。</li>
+<li><strong>层次结构</strong>：从下往上一般分为<u>微程序机器层、传统机器语言层、操作系统层、汇编语言层、高级语言层</u>等。每一层都为上一层提供支持，且对下一层进行抽象。</li>
+<li><strong>性能指标</strong>：
+<ul>
+<li><strong>字长</strong>：计算机一次能处理的二进制数据的位数，字长越长，数据处理能力越强。</li>
+<li><strong>主频</strong>：CPU内核工作的时钟频率，单位是赫兹（Hz），主频越高，CPU运算速度越快。</li>
+<li><strong>运算速度</strong>：可以用每秒执行的指令数（IPS）来衡量，也常用MIPS（百万条指令每秒）、FLOPS（浮点运算次数每秒）等表示。</li>
+<li><strong>存储容量</strong>：包括内存容量和外存容量，内存容量影响计算机的运行速度和可同时运行的程序数量，外存容量则决定了计算机能存储的数据量。</li>
+<li><strong>吞吐量</strong>：指系统在单位时间内处理请求的数量。</li>
+<li><strong>响应时间</strong>：从用户提交请求到系统首次产生响应所用的时间。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2计算机数制与编码定点数的表示与运算浮点数的表示与运算算术逻辑单元">（2）计算机数制与编码、定点数的表示与运算、浮点数的表示与运算、算术逻辑单元</h4>
+<ul>
+<li><strong>计算机数制与编码</strong>：
+<ul>
+<li><strong>数制</strong>：常用的有二进制（计算机内部基本采用的数制）、十进制（人们日常使用）、八进制和十六进制（在编程等领域用于简化二进制表示）。不同数制之间可以相互转换，如十进制转二进制可采用除2取余法。</li>
+<li><strong>编码</strong>：
+<ul>
+<li><strong>原码</strong>：最高位为符号位，0表示正数，1表示负数，其余位表示数值大小。</li>
+<li><strong>反码</strong>：正数的反码与原码相同，负数的反码是在原码的基础上，符号位不变，其余位按位取反。</li>
+<li><strong>补码</strong>：正数的补码与原码相同，负数的补码是其反码加1。补码在计算机中用于加减法运算，可简化运算电路。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>定点数的表示与运算</strong>：
+<ul>
+<li><strong>定点整数</strong>：小数点固定在数值的最右边，可分为有符号数和无符号数。运算包括加法、减法、乘法、除法等，运算时要注意符号位的处理和溢出问题。</li>
+<li><strong>定点小数</strong>：小数点固定在符号位之后，最高位为符号位，其余位表示小数的数值部分。运算规则与定点整数类似，但在乘法和除法运算时，结果的小数点位置需要特别关注。</li>
+</ul>
+</li>
+<li><strong>浮点数的表示与运算</strong>：
+<ul>
+<li><strong>表示形式</strong>：一般由符号位、阶码和尾数三部分组成。例如，N = M×2^E，其中M是尾数，E是阶码。浮点数可以表示很大范围的数，但运算比定点数复杂。</li>
+<li><strong>运算</strong>：包括加法、减法、乘法、除法等。运算过程中要进行对阶、尾数运算和结果规格化等操作，同时要注意浮点数的溢出和舍入问题。</li>
+</ul>
+</li>
+<li><strong>算术逻辑单元（ALU）</strong>：是计算机的核心运算部件，能进行算术运算（如加、减、乘、除等）和逻辑运算（如与、或、非、异或等）。它接收来自寄存器的数据，根据控制信号执行相应的运算，并将结果输出到寄存器或其他部件。</li>
+</ul>
+<h4 id="3存储器分类层次化结构类型及工作原理">（3）存储器分类、层次化结构、类型及工作原理</h4>
+<ul>
+<li><strong>存储器分类</strong>：
+<ul>
+<li><strong>按存储介质分</strong>：半导体存储器（如随机存取存储器RAM、只读存储器ROM）、磁表面存储器（如硬盘）、光存储器（如光盘）等。</li>
+<li><strong>按存取方式分</strong>：随机存取存储器（可在任意时刻对任意存储单元进行读写操作，如静态RAM和动态RAM）、顺序存取存储器（数据按顺序依次存取，如磁带）、直接存取存储器（介于随机存取和顺序存取之间，如磁盘）。</li>
+</ul>
+</li>
+<li><strong>层次化结构</strong>：一般分为高速缓冲存储器（Cache）、主存储器（内存）和辅助存储器（外存）。Cache速度最快，但容量小，位于CPU和主存之间，用于存放CPU近期可能会频繁访问的数据和指令，以提高CPU访问数据的速度；主存速度次之，容量较大，是计算机运行时数据和程序的主要存储场所；外存速度最慢，但容量大，用于长期存储大量的数据和程序。</li>
+<li><strong>类型及工作原理</strong>：
+<ul>
+<li><strong>随机存取存储器（RAM）</strong>：
+<ul>
+<li><strong>静态随机存取存储器（SRAM）</strong>：基本存储电路是由6个MOS管组成的双稳态触发器，只要不断电，信息就能一直保存。速度快，但集成度低、成本高，常用于高速缓存。</li>
+<li><strong>动态随机存取存储器（DRAM）</strong>：利用电容存储电荷来表示信息，由于电容存在漏电现象，需要定期刷新来保持信息。集成度高、成本低，但速度比SRAM慢，常用于主存储器。</li>
+</ul>
+</li>
+<li><strong>只读存储器（ROM）</strong>：信息在制造时或用专门的设备写入，使用时只能读出，不能写入。如掩膜ROM、可编程ROM（PROM）、可擦除可编程ROM（EPROM）、电可擦除可编程ROM（EEPROM）等，常用于存储计算机的基本输入输出系统（BIOS）等固定不变的程序和数据。</li>
+<li><strong>磁盘存储器</strong>：通过磁头在高速旋转的盘片上进行读写操作。数据存储在盘片的磁道和扇区中，磁盘的读写速度比内存慢，但容量大，是计算机常用的外存设备。</li>
+<li><strong>光盘存储器</strong>：利用激光在光盘上记录和读取信息。如CD - ROM（只读光盘）、CD - R（可记录光盘）、CD - RW（可重写光盘）、DVD等，具有存储容量大、成本低、便于携带等特点。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4指令系统基本概念和格式寻址方式cisc-和-risc-的基本概念高级语言程序与机器级代码之间的对应">（4）指令系统基本概念和格式、寻址方式，CISC 和 RISC 的基本概念，高级语言程序与机器级代码之间的对应</h4>
+<ul>
+<li><strong>指令系统基本概念和格式</strong>：
+<ul>
+<li><strong>指令</strong>：是计算机执行某种操作的命令，由操作码和操作数两部分组成。操作码表示要执行的操作类型，如加法、减法等；操作数则是操作的对象，可以是数据、地址等。</li>
+<li><strong>指令格式</strong>：常见的有零地址指令（如空操作指令）、一地址指令（如加1指令）、二地址指令（如加法指令，一个操作数地址为源操作数地址，另一个为目的操作数地址）、三地址指令（两个源操作数地址和一个目的操作数地址）等。</li>
+</ul>
+</li>
+<li><strong>寻址方式</strong>：
+<ul>
+<li><strong>立即寻址</strong>：操作数直接包含在指令中，取出指令即可得到操作数，速度快，但操作数的大小受指令长度限制。</li>
+<li><strong>直接寻址</strong>：指令中直接给出操作数的内存地址，访存一次即可得到操作数。</li>
+<li><strong>间接寻址</strong>：指令中给出的是操作数地址的地址，需要两次访存才能得到操作数。</li>
+<li><strong>寄存器寻址</strong>：操作数存放在寄存器中，指令中给出寄存器编号，速度快，因为寄存器的读写速度比内存快。</li>
+<li><strong>寄存器间接寻址</strong>：指令中给出的寄存器内容是操作数的地址，需要一次访存得到操作数。</li>
+<li><strong>基址寻址</strong>：指令中给出形式地址，同时有一个基址寄存器，操作数的有效地址等于基址寄存器内容加上形式地址。常用于程序的重定位。</li>
+<li><strong>变址寻址</strong>：与基址寻址类似，但变址寄存器的内容通常是可变的，常用于数组访问。</li>
+<li><strong>相对寻址</strong>：以程序计数器（PC）的内容为基地址，指令中给出的形式地址为偏移量，有效地址等于PC内容加上偏移量，常用于转移指令。</li>
+</ul>
+</li>
+<li><strong>CISC（复杂指令集计算机）和 RISC（精简指令集计算机）的基本概念</strong>：
+<ul>
+<li><strong>CISC</strong>：指令系统复杂庞大，指令长度和格式不固定，寻址方式多样。一条指令可以完成复杂的操作，但指令执行周期长，硬件设计复杂，典型的CISC处理器有Intel的x86系列。</li>
+<li><strong>RISC</strong>：指令系统精简，指令长度和格式固定，寻址方式简单。大多数指令在一个时钟周期内完成，硬件设计相对简单，通过优化编译程序来提高计算机的性能，如ARM处理器。</li>
+</ul>
+</li>
+<li><strong>高级语言程序与机器级代码之间的对应</strong>：高级语言程序需要经过编译程序或解释程序的处理，将其转换为机器级代码（机器语言指令序列）才能在计算机上执行。编译是将整个高级语言程序一次性翻译成目标机器代码，而解释是逐行翻译并执行高级语言程序。不同的高级语言有不同的语法和语义，但最终都要转换为计算机能识别的机器指令。在转换过程中，要考虑数据类型、变量存储、控制结构等方面的对应关系。</li>
+</ul>
+<h4 id="5中央处理器cpu的功能和基本结构">（5）中央处理器（CPU）的功能和基本结构</h4>
+<ul>
+<li><strong>CPU的功能</strong>：
+<ul>
+<li><strong>指令控制</strong>：从内存中取出指令，分析指令，执行指令，控制计算机的运行流程。</li>
+<li><strong>操作控制</strong>：根据指令的要求，向计算机的各个部件发出相应的控制信号，以完成规定的操作，如控制数据的读写、运算部件的运算等。</li>
+<li><strong>时间控制</strong>：对各种操作实施时间上的定时，使计算机各部件有条不紊地协同工作。例如，确定指令周期、时钟周期等时间参数。</li>
+<li><strong>数据加工</strong>：对数据进行算术运算和逻辑运算，如加法、减法、乘法、除法、与、或、非等运算。</li>
+</ul>
+</li>
+<li><strong>CPU的基本结构</strong>：
+<ul>
+<li><strong>运算器</strong>：进行算术和逻辑运算的部件，包括算术逻辑单元（ALU）、累加器、寄存器等。</li>
+<li><strong>控制器</strong>：是整个计算机的指挥中心，包括指令寄存器、指令译码器、程序计数器（PC）、时序产生器和操作控制器等。它根据指令的要求，产生各种控制信号，协调计算机各部件的工作。</li>
+<li><strong>寄存器组</strong>：包括通用寄存器、专用寄存器（如程序计数器、指令寄存器等）。寄存器用于暂存数据和指令，可提高CPU的运行速度，减少对内存的访问次数。</li>
+</ul>
+</li>
+</ul>
+<h4 id="6总线和输入输出系统的基本概念和工作方法指令周期指令流水技术中断系统">（6）总线和输入输出系统的基本概念和工作方法、指令周期、指令流水技术、中断系统</h4>
+<ul>
+<li><strong>总线和输入输出系统的基本概念和工作方法</strong>：
+<ul>
+<li><strong>总线</strong>：是连接计算机各个部件的一组公共信号线，包括地址总线、数据总线和控制总线。地址总线用于传输地址信息，确定数据的来源或目的地；数据总线用于传输数据；控制总线用于传输控制信号，如读写信号、中断请求信号等。</li>
+<li><strong>输入输出系统</strong>：负责计算机与外部设备之间的数据传输。包括输入设备（如键盘、鼠标）、输出设备（如显示器、打印机）和输入输出接口（如USB接口、串口、并口等）。输入输出方式有程序查询方式、中断方式、DMA（直接存储器访问）方式等。
+<ul>
+<li><strong>程序查询方式</strong>：CPU不断地查询外部设备的状态，当设备准备好时，才进行数据传输。这种方式CPU利用率低，因为在查询等待过程中，CPU处于空闲状态。</li>
+<li><strong>中断方式</strong>：当外部设备准备好数据或完成操作时，向CPU发出中断请求，CPU暂停当前程序的执行，转去处理中断服务程序，处理完后再返回原程序继续执行。这种方式提高了CPU的利用率，使CPU可以同时处理多个设备的输入输出请求。</li>
+<li><strong>DMA方式</strong>：在内存和外部设备之间直接进行数据传输，不需要CPU的干预，适用于大量数据的快速传输，如磁盘与内存之间的数据传输。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>指令周期</strong>：是指CPU从内存取出一条指令并执行这条指令的时间总和。指令周期通常由若干个机器周期组成，一个机器周期又包含若干个时钟周期。不同类型的指令，其指令周期可能不同，一般包括取指周期、间址周期、执行周期和中断周期等。</li>
+<li><strong>指令流水技术</strong>：将一条指令的执行过程分解为多个子过程（如取指、译码、执行、访存、写回等），每个子过程在不同的功能部件上同时进行，就像工厂的流水线一样，这样可以提高指令的执行速度。但指令流水线可能会出现数据相关、控制相关等问题，需要采取相应的技术（如数据旁路技术、分支预测技术等）来解决。</li>
+<li><strong>中断系统</strong>：是计算机实现中断功能的硬件和软件的总称。当中断源（如外部设备、故障等）向CPU发出中断请求时，CPU暂停当前程序的执行，保存当前的程序状态（如程序计数器、寄存器内容等），转去执行相应的中断服务程序，处理完中断事件后，再恢复原来的程序状态继续执行。中断系统可以提高计算机的实时性和多任务处理能力，使计算机能及时响应外部事件。</li>
+</ul>
+<h4 id="7微型计算机关于数制和码制的基础知识微机系统组成的基本概念和基本工作原理微机的三大总线微机的时钟时序等概念及基本操作时序">（7）微型计算机关于数制和码制的基础知识，微机系统组成的基本概念和基本工作原理，微机的三大总线，微机的时钟、时序等概念及基本操作时序</h4>
+<ul>
+<li><strong>微型计算机关于数制和码制的基础知识</strong>：与计算机数制与编码部分类似，包括二进制、十进制、十六进制等数制的转换，原码、反码、补码等编码方式。在微型计算机中，数据的存储和处理都是基于这些数制和码制的。</li>
+<li><strong>微机系统组成的基本概念和基本工作原理</strong>：
+<ul>
+<li><strong>组成</strong>：一般由微处理器（CPU）、存储器、输入输出接口和系统总线等组成。微处理器是微机的核心，负责执行指令和数据处理；存储器用于存储程序和数据；输入输出接口用于连接外部设备；系统总线则是各部件之间通信的通道。</li>
+<li><strong>工作原理</strong>：微机通过执行存储在存储器中的程序来完成各种任务。程序由一系列指令组成，微处理器从存储器中取出指令，译码并执行，在执行过程中，可能需要从存储器读取数据或向存储器写入数据，也可能通过输入输出接口与外部设备进行数据交换。</li>
+</ul>
+</li>
+<li><strong>微机的三大总线</strong>：
+<ul>
+<li><strong>地址总线</strong>：用于传送CPU发出的地址信号，以确定要访问的存储单元或外部设备的地址。地址总线的位数决定了微机的内存容量和可寻址的外部设备数量。</li>
+<li><strong>数据总线</strong>：用于在CPU、存储器和外部设备之间传送数据。数据总线的宽度（位数）决定了一次能传输的数据量，例如8位数据总线一次能传输8位二进制数据。</li>
+<li><strong>控制总线</strong>：传送各种控制信号，如读写信号、中断请求信号、复位信号等，以协调微机各部件的工作。</li>
+</ul>
+</li>
+<li><strong>微机的时钟、时序等概念及基本操作时序</strong>：
+<ul>
+<li><strong>时钟</strong>：微机系统中有一个时钟发生器，产生稳定的时钟信号，为计算机的各个部件提供同步的时间基准。时钟信号的频率决定了微机的运行速度。</li>
+<li><strong>时序</strong>：指计算机执行指令时，各个操作在时间上的先后顺序。基本操作时序包括取指时序、读操作时序、写操作时序等。例如，在取指时序中，要按照一定的时间顺序进行地址输出、读控制信号有效、数据输入等操作，以保证正确地从存储器中取出指令。这些时序关系是由微机的硬件电路和控制信号来保证的。</li>
+</ul>
+</li>
+</ul> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links astro-u2l5gyhi" dir="ltr"> <a href="/jizu/计组-整理" rel="prev" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg>  <span class="astro-u2l5gyhi"> 上一页 <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">知识点-整理版</span> </span> </a> <a href="/notes/docker" rel="next" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>  <span class="astro-u2l5gyhi"> 下一页 <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Docker🐳容器入门</span> </span> </a> </div>   </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>
