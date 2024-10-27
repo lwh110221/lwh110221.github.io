@@ -23,6 +23,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: '计算机组成原理',
+					items: [
+						{ label: '考点汇总', slug: 'jizu/kaodian' },
+					],
+				},
+				{
 					label: '实验笔记',
 					items: [
 						{ label: 'Docker🐳容器入门', slug: 'notes/docker' },

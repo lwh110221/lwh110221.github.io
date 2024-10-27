@@ -17,7 +17,7 @@ WORKDIR /app
 COPY . /app
 
 # 创建一个包含自己姓名全拼的文本文件并写入一些内容
-RUN echo "罗文浩的docker容器，实验用，" > 名字.txt
+RUN echo "XXX的docker容器，实验用，" > 名字.txt
 
 WORKDIR dir-robots
 ADD https://www.aliyun.com/robots.txt robots.txt
