@@ -20,10 +20,11 @@ export default defineConfig({
 					label: '开始',
 					items: [
 						{ label: 'Tips', slug: 'guides/example' },
+						{ label: '大纲', slug: 'guides/dagan' },
 					],
 				},
 				{
-					label: '考点大纲',
+					label: '大纲提取',
 					items: [
 						{ label: '计算机组成原理', slug: '25dagang/大纲提取-计算机组成原理' },
 						{ label: '数据结构', slug: '25dagang/大纲提取-数据结构' },
@@ -44,6 +45,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: '数据库系统原理',
+					items: [
+						{ label: '数据库系统原理-1', slug: 'shujvku/数据库系统原理' },
+					],
+				},
+				{
 					label: '实验笔记',
 					items: [
 						{ label: 'Docker🐳容器入门', slug: 'notes/docker' },
@@ -53,6 +60,12 @@ export default defineConfig({
 					label: '杂项',
 					items: [
 						{ label: 'Mac快捷键', slug: 'zaxiang/mactip' },
+					],
+				},
+				{
+					label: '其他',
+					items: [
+						{ label: '关于', slug: 'about' },
 					],
 				},
 			],
