@@ -60,6 +60,7 @@ export default defineConfig({
 					label: '杂项',
 					items: [
 						{ label: 'Mac快捷键', slug: 'zaxiang/mactip' },
+						{ label: '刷题笔记-计组', slug: 'zaxiang/刷题笔记-计组' },
 					],
 				},
 				{
