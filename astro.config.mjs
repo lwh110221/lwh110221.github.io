@@ -61,6 +61,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Mac快捷键', slug: 'zaxiang/mactip' },
 						{ label: '刷题笔记-计组', slug: 'zaxiang/刷题笔记-计组' },
+						{ label: 'chap1', slug: 'zaxiang/chap1' },
 					],
 				},
 				{
